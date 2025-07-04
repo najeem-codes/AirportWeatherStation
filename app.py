@@ -1,7 +1,9 @@
 from flask import Flask, render_template, request
 import requests
 
-app = Flask(__name__)
+# Tell Flask to look for templates in the existing `template` directory
+# instead of the default `templates` directory.
+app = Flask(__name__, template_folder='template')
 
 @app.route('/')
 def home():
